@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Foodie</string>
+    <string name="error_please_try_again">Error! Please swipe!</string>
+</resources>

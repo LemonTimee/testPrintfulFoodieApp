@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/food_graph"
+    app:startDestination="@id/fragmentFoodList">
+
+    <fragment
+        android:id="@+id/fragmentFoodList"
+        android:name="com.printful.foodie.view.FragmentFoodList"
+        android:label="FragmentFoodList" >
+        <action
+            android:id="@+id/action_fragmentFoodList_to_fragmentFoodDetail"
+            app:destination="@id/fragmentFoodDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFoodDetail"
+        android:name="com.printful.foodie.view.FragmentFoodDetail"
+        android:label="FragmentFoodDetail" >
+        <action
+            android:id="@+id/action_fragmentFoodDetail_to_fragmentFoodList"
+            app:destination="@id/fragmentFoodList" />
+        <argument
+            android:name="foodId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
